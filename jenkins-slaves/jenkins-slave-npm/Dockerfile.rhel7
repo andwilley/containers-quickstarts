@@ -17,7 +17,7 @@ ENV NODEJS_VERSION=10 \
 
 ADD src/google-chrome.repo /etc/yum.repos.d/
 
-RUN INSTALL_PKGS="npm nss_wrapper redhat-lsb libXScrnSaver xdg-utils google-chrome-stable Xvfb gtk2 libnotify-devel libgconf-2.so.4 nss libXss.so.1 alsa-lib" && \
+RUN INSTALL_PKGS="npm nss_wrapper redhat-lsb libXScrnSaver xdg-utils google-chrome-stable Xvfb gtk2 libnotify-devel GConf2 nss libXScrnSaver alsa-lib" && \
     yum install -y --setopt=tsflags=nodocs \
       --disablerepo=* \
       --enablerepo=rhel-7-server-rpms \
